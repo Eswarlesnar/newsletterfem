@@ -1,11 +1,11 @@
+@import "./fonts.css";
 
 .main{
-  /* height : 1080px;  */
   display: flex;
   flex-direction: column;
 }
 
-section {
+.image {
   background-image: url("./assets/illustration-sign-up-mobile.svg");
   background-size : cover;
   min-height : 284px;
@@ -16,6 +16,11 @@ section {
 .content { 
   padding : 25px;
   padding-bottom : 0;
+}
+
+.content h1{
+  font-weight : bolder;
+  letter-spacing: 0.08rem;
 }
 
 .content .item {
@@ -35,15 +40,26 @@ section {
   gap:10px;
 }
 
+.form label {
+  font-weight : bold;
+}
+
 .form input{
   width : 100%;
   height : 40px;
-  border : 1px solid gray;
+  border : 1px solid hsl(231, 7%, 60%);
   border-radius : 5px;
+  padding : 5px;
+  outline : none;
  
 }
 
-.form button {
+.form  input:hover{
+  border : 1px solid black;
+  cursor: pointer;
+}
+
+button {
   width : 100%;
   height : 40px;
   padding : 0;
@@ -51,14 +67,21 @@ section {
   border-radius : 5px;
   color : white;
   margin-top : 10px;
-  background : rgba(4, 4, 71, 0.9);
+  background : hsl(234, 29%, 20%);
 }
+
+button:hover{
+  background : linear-gradient(to right , rgb(255,91,100) , rgb(253,105,91) 5%);
+  cursor : pointer;
+}
+
+
 
 
 
 @media screen and (min-width : 1000px) {
    .container {
-     background : gray;
+     background : hsl(235, 18%, 26%);
      display : flex ; 
      justify-content: center;
      align-items: center;

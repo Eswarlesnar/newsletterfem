@@ -1,8 +1,27 @@
+import { FormEvent, useState } from 'react'
 import './App.css'
+import Success from './Success'
 // import { ReactComponent as Header} from "./assets/illustration-sign-up-mobile.svg"
 
 function App() {
-
+  const [input , setInput] = useState("") 
+  const [subscribed , setSubscribed ] = useState(false)
+  const [errors , setErrors] = useState("")
+  
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if(!emailRegex.test(input)){
+        setErrors("valid email is required")
+    }else{
+       setSubscribed(true)
+    }
+  }
+  
+  if(subscribed) {
+    return <Success />
+  }
+  
   return (
     <div className='container'>
     <div className='main'>
@@ -29,14 +48,12 @@ function App() {
              </div>
           </div>
         </div>
-        <form className='form'>
+        <form className='form' onSubmit = {handleSubmit}>
           <label htmlFor='email'>Email Address</label>
-          <input type ="email" id="email" required />
+          <input type ="email" id="text" value = {input} onChange = { e => setInput(e.target.value)} />
           <button>Subscribe to monthly newsletter</button>
         </form>
-
       </div>
-    
     </div>
     </div>
   )
