@@ -51,7 +51,7 @@
   border-radius : 5px;
   padding : 5px;
   outline : none;
- 
+  font-size : 10px;
 }
 
 .form  input:hover{
@@ -81,6 +81,13 @@ button:hover{
   color :red;
   padding-left : 10px;
 }
+
+
+@viewport {
+  zoom: 1.0; /* Set the initial scale to 1 */
+
+}
+
 
 
 
