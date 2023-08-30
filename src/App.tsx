@@ -50,7 +50,10 @@ function App() {
         </div>
         <form className='form' onSubmit = {handleSubmit}>
           <label htmlFor='email'>Email Address</label>
-          <input type ="email" id="text" value = {input} onChange = { e => setInput(e.target.value)} />
+          <input type ="text" id="text" value = {input} onChange = { e => setInput(e.target.value)} />
+          {
+            errors.length > 0 &&<p className='error'>{errors}</p>
+          }
           <button>Subscribe to monthly newsletter</button>
         </form>
       </div>

@@ -76,6 +76,13 @@ button:hover{
 }
 
 
+.error{
+  font-weight: 100;
+  color :red;
+  padding-left : 10px;
+}
+
+
 
 
 
