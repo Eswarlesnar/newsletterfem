@@ -1,6 +1,8 @@
-.main{
-  height : 1080px; 
 
+.main{
+  /* height : 1080px;  */
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -13,12 +15,16 @@ section {
 
 .content { 
   padding : 25px;
+  padding-bottom : 0;
 }
 
 .content .item {
    display : flex;
    gap : 10px;
    align-items: center;
+}
+.item p {
+   margin : 10px;
 }
 
 .form {
@@ -48,4 +54,33 @@ section {
   background : rgba(4, 4, 71, 0.9);
 }
 
+
+
+@media screen and (min-width : 1000px) {
+   .container {
+     background : gray;
+     display : flex ; 
+     justify-content: center;
+     align-items: center;
+     height : 100vh;
+   }
+
+   .main {
+      width : auto;
+      display : grid ; 
+      grid-template-columns: 375px 375px;
+      gap :30px;
+      background : white;
+      padding : 20px;
+      border-radius : 20px;
+   }
+
+   section {
+     background-image : url("./assets/illustration-sign-up-desktop.svg");
+     /* max-width: 100%; */
+     background-size : cover;
+     background-repeat : no-repeat;
+     order : 2
+   }
+}
 

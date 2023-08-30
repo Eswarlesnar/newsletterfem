@@ -4,6 +4,7 @@ import './App.css'
 function App() {
 
   return (
+    <div className='container'>
     <div className='main'>
       <section className='image'>
       </section>
@@ -36,6 +37,7 @@ function App() {
 
       </div>
     
+    </div>
     </div>
   )
 }
